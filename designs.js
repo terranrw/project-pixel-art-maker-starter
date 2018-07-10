@@ -12,7 +12,8 @@ submitBtn.addEventListener('click', function (evt) {
 })
 
 function makeGrid() {
-
+  let m = height.valueAsNumber;
+  let n = width.valueAsNumber;
 // Your code goes here!
 
 }
