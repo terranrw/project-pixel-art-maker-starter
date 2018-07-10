@@ -19,7 +19,6 @@ function makeGrid(evt) {
 // Your code goes here!
   for (var row = 0; row < m; row++) {
     const addTr = document.createElement('tr');
-
     for (var col = 0; col < n; col++) {
       const addTd = document.createElement('td');
       addTr.appendChild(addTd);
@@ -28,3 +27,9 @@ function makeGrid(evt) {
   }
   table.appendChild(tableBody);
 }
+
+document.querySelector('#pixelCanvas').addEventListener('click', function (evt) {
+    if (evt.target.nodeName === 'TD') {
+        evt.target.style.background = colorPicker.value;
+    }
+});
