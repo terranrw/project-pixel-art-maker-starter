@@ -14,6 +14,7 @@ submitBtn.addEventListener('click', function (evt) {
 function makeGrid() {
   let m = height.valueAsNumber;
   let n = width.valueAsNumber;
+  const table = document.querySelector('#pixelCanvas');
 // Your code goes here!
 
 }
