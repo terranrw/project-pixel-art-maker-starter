@@ -7,12 +7,13 @@ const height = document.querySelector('#inputHeight');
 // When size is submitted by the user, call makeGrid()
 const submitBtn = document.querySelector('input[type=submit]');
 //Table vaiables
-const table = document.getElementById('pixelCanvas');
+let table = document.getElementById('pixelCanvas');
 const tableBody = document.createElement('tbody');
 
 function makeGrid(evt) {
   evt.preventDefault();
-
+  table.innerHTML = '';
+  const tableBody = document.createElement('tbody');
   for (var row = 0; row < height.value; row++) {
     const addTr = document.createElement('tr');
     for (var col = 0; col < width.value; col++) {
