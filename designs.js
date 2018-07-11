@@ -1,25 +1,22 @@
 // Select color input
 const colorPicker = document.querySelector('#colorPicker');
 // Select size input
-const width = document.querySelector('#inputWeight');
+const width = document.querySelector('#inputWidth');
 
 const height = document.querySelector('#inputHeight');
 // When size is submitted by the user, call makeGrid()
 const submitBtn = document.querySelector('input[type=submit]');
 submitBtn.addEventListener('click', makeGrid);
 
+const table = document.getElementById('pixelCanvas');
+const tableBody = document.createElement('tbody');
+
 function makeGrid(evt) {
   evt.preventDefault();
-  let m = height.valueAsNumber;
-  let n = width.valueAsNumber;
-  const table = document.querySelector('#pixelCanvas');
-  const tableBody = document.createElement('tbody');
-//  const addTd = document.createElement('td');
-//  console.log(`${m} and ${n}`);
-// Your code goes here!
-  for (var row = 0; row < m; row++) {
+
+  for (var row = 0; row < height.value; row++) {
     const addTr = document.createElement('tr');
-    for (var col = 0; col < n; col++) {
+    for (var col = 0; col < width.value; col++) {
       const addTd = document.createElement('td');
       addTr.appendChild(addTd);
     }
