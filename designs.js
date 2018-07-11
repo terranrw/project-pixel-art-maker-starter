@@ -6,8 +6,7 @@ const width = document.querySelector('#inputWidth');
 const height = document.querySelector('#inputHeight');
 // When size is submitted by the user, call makeGrid()
 const submitBtn = document.querySelector('input[type=submit]');
-submitBtn.addEventListener('click', makeGrid);
-
+//Table vaiables
 const table = document.getElementById('pixelCanvas');
 const tableBody = document.createElement('tbody');
 
@@ -24,6 +23,8 @@ function makeGrid(evt) {
   }
   table.appendChild(tableBody);
 }
+//Event Listeners
+submitBtn.addEventListener('click', makeGrid);
 
 document.querySelector('#pixelCanvas').addEventListener('click', function (evt) {
     if (evt.target.nodeName === 'TD') {
